@@ -35,12 +35,13 @@ uv run --no-sync python -m examples.seed
 并明确选择示例标识、精选和发布状态；通用导入器不做这些选择。
 原有项目、步骤、资源 ID 可原位保留，来源说明和 AI 标识一并保留。
 
-可选联调页启动：
+后端启动：
 
 ```bash
-uv run --no-sync python -m dream_journey.web --migrate --static-dir ../frontend \
+uv run --no-sync python -m dream_journey.web --migrate \
   --mount /demo-resources=demo-resources
 ```
 
-其中额外挂载仅供历史演示报告使用。访问 http://127.0.0.1:8000 。
+其中额外挂载仅供历史演示报告使用。前端运行方式见 [前端说明](../../frontend/README.md)，
+访问 http://127.0.0.1:5173 。
 示例集成测试用 `uv run --no-sync pytest -q tests/examples`，需要随附清单及媒体。

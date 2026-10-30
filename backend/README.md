@@ -16,7 +16,8 @@ uv run --no-sync python -m dream_journey.web --migrate
 
 API 地址为 http://127.0.0.1:8000/api/v1/health 。空库可以直接运行，列表为空。
 命令不自动导入示例。已有数据库执行迁移后保留原数据。
-需要最小联调页时加 `--static-dir ../frontend`，然后访问 http://127.0.0.1:8000 。
+完整前端在 `frontend/`，按 [前端说明](../frontend/README.md) 启动，地址为 http://127.0.0.1:5173 。
+现有账号上传测试页可用 `--static-dir static`。
 独立前端使用 [API.md](API.md)，可加 `--cors-origin http://localhost:5173`。
 
 所有命令建议在 `backend/` 下执行。`DATABASE_URL` 可指定数据库，命令行导入和 Alembic
@@ -50,7 +51,7 @@ uv run --no-sync python -m dream_journey.import_manifest \
 
 ```bash
 uv run --no-sync python -m examples.import_packages --dataset all
-uv run --no-sync python -m dream_journey.web --migrate --static-dir ../frontend
+uv run --no-sync python -m dream_journey.web --migrate
 ```
 
 具体包的重新整理命令、历史示例报告挂载及素材说明见 [examples/README.md](examples/README.md)。

@@ -1,22 +1,22 @@
 # Dream Journey 项目探索平台
 
-后端提供项目档案、通用数据导入、媒体关联及公开查询，独立于具体数据集。
-`frontend/` 是可替换的最小联调页，正式前端可独立接入。
+后端提供用户注册登录、项目发布、通用数据导入、媒体关联及公开查询，独立于具体数据集。
 
 - [问题背景](Problem.md) · [功能需求](Requirements.md) · [数据库设计](DatabaseDesign.md)
 - [后端说明](backend/README.md) · [通用导入格式](backend/MANIFEST.md) · [API](backend/API.md)
-- [最小联调页](frontend/README.md) · [可选示例数据](backend/examples/README.md)
+- [可选示例数据](backend/examples/README.md)
 
 ## 启动
 
 ```bash
 cd backend
 uv sync --locked --extra dev
-uv run --no-sync python -m dream_journey.web --migrate --static-dir ../frontend
+uv run --no-sync python -m dream_journey.web --migrate --static-dir static --media-root media
 ```
 
-访问 http://127.0.0.1:8000 。默认 SQLite，`DATABASE_URL` 可切换 PostgreSQL。
-启动不导入数据，已有项目保留；新库列表为空。纯 API 服务省略 `--static-dir` 即可。
+打开 http://127.0.0.1:8000 。内置页面支持注册、登录、附件上传和项目发布，提交后自动公开。
+API 健康检查地址为 http://127.0.0.1:8000/api/v1/health 。
+默认使用 SQLite，`DATABASE_URL` 可切换 PostgreSQL。启动不导入数据，已有项目保留。
 
 ## 导入数据
 
