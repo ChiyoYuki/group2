@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "dataset": {
+    "key": "adream-three-projects",
+    "version": 1
+  },
+  "project": {
+    "slug": "adream-border",
+    "title": "梦想工程·爱在边疆 点亮国门",
+    "short_title": "爱在边疆 点亮国门",
+    "summary": "连接捐赠企业、内地结对学校和教育伙伴，支持边疆学校建设、教师发展及定制教育服务。",
+    "background": "机构：上海真爱梦想公益基金会\n服务对象：教育资源相对薄弱的边疆县区学校及师生\n服务模式：三年服务周期；1+1+5+X组团帮扶。\n启动情况：2021年11月；真爱梦想与中国教育报共同发起。\n资料范围：所查介绍未披露全项目累计筹款、人数或学校总量；已提取首篇简报的局部活动与建设进度。",
+    "team_name": "上海真爱梦想公益基金会",
+    "content_kind": "documented",
+    "content_notice": "项目介绍、动态首页索引、每个项目目录首篇简报重点数据及奉新培训报道\n范围：用户确认的前三个项目；梦想师范班未纳入。提取各项目介绍、当前动态目录，以及目录首篇简报的重点数值；一县一梦想另核读奉新培训报道。并非全站全部历史文章或内部数据库导出。\n核查日期为2026-10-30（Asia/Shanghai），不是数据统计截止日期。介绍和简报中的历史日期分别保留。\n动态目录首条分别为梦想中心2025年5月、爱在边疆2024年11月、一县一梦想2024年9—10月，仅描述本次所查目录，不代表全站不存在更近期资料。\n指标的value应结合unit理解；部分数据已换算为基本单位，原文币种不明的金额保留原单位。约、超过、多于等含义保存在qualifier；带限定词的value不能当精确总量；范围值保留raw_value，value为空。\nnull或空白表示所查来源未披露/不适用，不表示0。未披露的总筹资或总受益人数不估算、不补零。\n人次、人数、师生合计和教师人数为不同口径；不同子项目、地区和活动可能重叠，不作加总。\n去远方的筹资和受益数据只属于去远方子项目，不是整个一县一梦想的累计总量。\n国门学校100所属于政策背景目标，不作为爱在边疆成效；三年、1+1+5+X为项目方案参数。\n爱在边疆原文同时写每组5所县域学校和1所项目学校加3—4所辐射校，保留该差异，未自行修正。\nPDF页码为文件页序，从1起，含封面；PDF发布日期采用其官方承载文章标注日期。数据来自可提取文字；图像中的未读信息不推测。\n资料整理为事实数据及简明归纳，附原网页和PDF链接供核验；不包含原网页全文、照片或完整原始简报。\n服务和成效由官网自报，本包仅核对来源，未独立审计。金额若原文未标币种，则保留原文单位。",
+    "content_tags": [
+      "真爱梦想",
+      "教育公益",
+      "公开资料"
+    ],
+    "research_methods": "整理项目官网介绍、动态目录及已核读简报；核查日期：2026-10-30（Asia/Shanghai）。",
+    "is_demo": false,
+    "status": "draft"
+  },
+  "themes": [
+    {
+      "slug": "education-philanthropy",
+      "name": "教育公益",
+      "description": "教育公益项目与素养教育实践"
+    }
+  ],
+  "questions": [],
+  "stages": [],
+  "resources": [
+    {
+      "key": "project-data",
+      "title": "项目结构化数据（原始 JSON）",
+      "type": {
+        "code": "source-data",
+        "name": "结构化数据"
+      },
+      "filename": "border/项目数据.json",
+      "usage_role": "reference",
+      "description": "数据包原始记录；核查日期：2026-10-30。",
+      "source_name": "真爱梦想三个项目数据包",
+      "original_url": "https://www.adream.org/dream_projects/爱在边疆-介绍"
+    },
+    {
+      "key": "metrics",
+      "title": "关键指标（10 项）",
+      "type": {
+        "code": "data-table",
+        "name": "数据表格"
+      },
+      "filename": "border/关键指标.csv",
+      "usage_role": "output",
+      "description": "保留原始数值、标准化数值、单位、限定词、统计范围、指标性质及来源。",
+      "source_name": "真爱梦想三个项目数据包",
+      "original_url": "https://www.adream.org/dream_projects/爱在边疆-介绍"
+    },
+    {
+      "key": "project-description",
+      "title": "项目说明（数据包原文）",
+      "type": {
+        "code": "document",
+        "name": "说明文档"
+      },
+      "filename": "border/项目说明.md",
+      "usage_role": "reference",
+      "source_name": "真爱梦想三个项目数据包",
+      "original_url": "https://www.adream.org/dream_projects/爱在边疆-介绍"
+    },
+    {
+      "key": "components",
+      "title": "服务与子项目（1 项）",
+      "type": {
+        "code": "data-table",
+        "name": "数据表格"
+      },
+      "url": "https://www.adream.org/dream_projects/爱在边疆-介绍",
+      "usage_role": "output",
+      "description": "服务项目、对象、活动、合作方及来源。",
+      "source_name": "上海真爱梦想公益基金会",
+      "source_url": "https://www.adream.org/dream_projects/爱在边疆-介绍",
+      "original_url": "https://www.adream.org/dream_projects/爱在边疆-介绍",
+      "structured_data": {
+        "columns": [
+          "project_id",
+          "name",
+          "category",
+          "target",
+          "activities",
+          "partners",
+          "source_id",
+          "project_name",
+          "source_url"
+        ],
+        "rows": [
+          [
+            "border",
+            "1+1+5+X组团帮扶",
+            "服务模式",
+            "边疆县域学校及师生",
+            "连接冠名企业、内地龙头学校、县域学校和教育伙伴，按需求提供建设、培训和交流。",
+            "真爱梦想、中国教育报；指导单位按原文为上海市合作交流办、上海民政局。",
+            "border_intro",
+            "梦想工程·爱在边疆 点亮国门",
+            "https://www.adream.org/dream_projects/爱在边疆-介绍"
+          ]
+        ]
+      }
+    },
+    {
+      "key": "updates",
+      "title": "动态目录（6 条）",
+      "type": {
+        "code": "data-table",
+        "name": "数据表格"
+      },
+      "url": "https://www.adream.org/dream-projects/爱在边疆-动态",
+      "usage_role": "reference",
+      "description": "保留目录顺序、核读状态、链接和核查日期。",
+      "source_name": "上海真爱梦想公益基金会",
+      "source_url": "https://www.adream.org/dream-projects/爱在边疆-动态",
+      "original_url": "https://www.adream.org/dream-projects/爱在边疆-动态",
+      "structured_data": {
+        "columns": [
+          "project_id",
+          "project_name",
+          "title",
+          "url",
+          "listing_order",
+          "extraction_status",
+          "directory_source_id",
+          "retrieved_date"
+        ],
+        "rows": [
+          [
+            "border",
+            "梦想工程·爱在边疆 点亮国门",
+            "梦想工程·爱在边疆2024年11月项目动态",
+            "https://www.adream.org/dream_projects/梦想工程·爱在边疆2024年11月项目动态",
+            "1",
+            "已核读正文或附件并提取重点指标",
+            "border_updates",
+            "2026-10-30"
+          ],
+          [
+            "border",
+            "梦想工程·爱在边疆 点亮国门",
+            "梦想工程·爱在边疆2024年10月项目动态",
+            "https://www.adream.org/dream_projects/梦想工程·爱在边疆2024年10月项目动态",
+            "2",
+            "仅收录目录标题和链接，未逐篇提取",
+            "border_updates",
+            "2026-10-30"
+          ],
+          [
+            "border",
+            "梦想工程·爱在边疆 点亮国门",
+            "梦想工程·爱在边疆2024年9月项目动态",
+            "https://www.adream.org/dream_projects/梦想工程·爱在边疆2024年9月项目动态",
+            "3",
+            "仅收录目录标题和链接，未逐篇提取",
+            "border_updates",
+            "2026-10-30"
+          ],
+          [
+            "border",
+            "梦想工程·爱在边疆 点亮国门",
+            "梦想工程·爱在边疆2024年8月项目动态",
+            "https://www.adream.org/dream_projects/梦想工程·爱在边疆2024年8月项目动态",
+            "4",
+            "仅收录目录标题和链接，未逐篇提取",
+            "border_updates",
+            "2026-10-30"
+          ],
+          [
+            "border",
+            "梦想工程·爱在边疆 点亮国门",
+            "梦想工程·爱在边疆2024年7月项目动态",
+            "https://www.adream.org/dream_projects/梦想工程·爱在边疆2024年7月项目动态",
+            "5",
+            "仅收录目录标题和链接，未逐篇提取",
+            "border_updates",
+            "2026-10-30"
+          ],
+          [
+            "border",
+            "梦想工程·爱在边疆 点亮国门",
+            "梦想工程·爱在边疆2024年6月项目动态",
+            "https://www.adream.org/dream_projects/梦想工程·爱在边疆2024年6月项目动态",
+            "6",
+            "仅收录目录标题和链接，未逐篇提取",
+            "border_updates",
+            "2026-10-30"
+          ]
+        ]
+      }
+    },
+    {
+      "key": "source-border_intro",
+      "title": "爱在边疆-介绍",
+      "type": {
+        "code": "source-link",
+        "name": "来源链接"
+      },
+      "url": "https://www.adream.org/dream_projects/爱在边疆-介绍",
+      "usage_role": "reference",
+      "description": "来源编号：border_intro\n发布日期：2024-04-01\n核查日期：2026-10-30",
+      "source_name": "上海真爱梦想公益基金会",
+      "source_url": "https://www.adream.org/dream_projects/爱在边疆-介绍",
+      "original_url": "https://www.adream.org/dream_projects/爱在边疆-介绍",
+      "provenance_note": null
+    },
+    {
+      "key": "source-border_updates",
+      "title": "爱在边疆-动态",
+      "type": {
+        "code": "source-link",
+        "name": "来源链接"
+      },
+      "url": "https://www.adream.org/dream-projects/爱在边疆-动态",
+      "usage_role": "reference",
+      "description": "来源编号：border_updates\n核查日期：2026-10-30",
+      "source_name": "上海真爱梦想公益基金会",
+      "source_url": "https://www.adream.org/dream-projects/爱在边疆-动态",
+      "original_url": "https://www.adream.org/dream-projects/爱在边疆-动态",
+      "provenance_note": null
+    },
+    {
+      "key": "source-border_202411_article",
+      "title": "梦想工程·爱在边疆2024年11月项目动态",
+      "type": {
+        "code": "source-link",
+        "name": "来源链接"
+      },
+      "url": "https://www.adream.org/dream_projects/梦想工程·爱在边疆2024年11月项目动态",
+      "usage_role": "reference",
+      "description": "来源编号：border_202411_article\n发布日期：2024-12-04\n核查日期：2026-10-30",
+      "source_name": "上海真爱梦想公益基金会",
+      "source_url": "https://www.adream.org/dream_projects/梦想工程·爱在边疆2024年11月项目动态",
+      "original_url": "https://www.adream.org/dream_projects/梦想工程·爱在边疆2024年11月项目动态",
+      "provenance_note": null
+    },
+    {
+      "key": "source-border_202411_pdf",
+      "title": "2024年11月项目活动报告：爱在边疆·点亮国门（10页）",
+      "type": {
+        "code": "source-link",
+        "name": "来源链接"
+      },
+      "url": "https://www.adream.org/wp-content/uploads/2024/12/2024-12-04-09223499.pdf",
+      "usage_role": "reference",
+      "description": "来源编号：border_202411_pdf\n发布日期：2024-12-04\n核查日期：2026-10-30\n发布日期取官方承载文章；报告期见指标，PDF页码按文件第1页起计。",
+      "source_name": "上海真爱梦想公益基金会",
+      "source_url": "https://www.adream.org/wp-content/uploads/2024/12/2024-12-04-09223499.pdf",
+      "original_url": "https://www.adream.org/wp-content/uploads/2024/12/2024-12-04-09223499.pdf",
+      "provenance_note": "发布日期取官方承载文章；报告期见指标，PDF页码按文件第1页起计。"
+    }
+  ],
+  "sections": [
+    {
+      "key": "overview",
+      "kind": "opening",
+      "title": "项目概况",
+      "body": "机构：上海真爱梦想公益基金会\n服务对象：教育资源相对薄弱的边疆县区学校及师生\n服务模式：三年服务周期；1+1+5+X组团帮扶。\n启动情况：2021年11月；真爱梦想与中国教育报共同发起。\n资料范围：所查介绍未披露全项目累计筹款、人数或学校总量；已提取首篇简报的局部活动与建设进度。"
+    },
+    {
+      "key": "components",
+      "kind": "output",
+      "title": "服务与子项目",
+      "body": "### 1+1+5+X组团帮扶\n类别：服务模式\n对象：边疆县域学校及师生\n活动：连接冠名企业、内地龙头学校、县域学校和教育伙伴，按需求提供建设、培训和交流。\n合作方：真爱梦想、中国教育报；指导单位按原文为上海市合作交流办、上海民政局。\n来源：border_intro",
+      "media": [
+        {
+          "resource_key": "components"
+        }
+      ]
+    },
+    {
+      "key": "metrics",
+      "kind": "output",
+      "title": "关键指标",
+      "body": "共 10 项指标。数值须结合单位、限定词、统计范围和原始表述理解；完整字段见关联 CSV。",
+      "media": [
+        {
+          "resource_key": "metrics"
+        }
+      ]
+    },
+    {
+      "key": "updates",
+      "kind": "other",
+      "title": "动态目录",
+      "body": "1. [梦想工程·爱在边疆2024年11月项目动态](https://www.adream.org/dream_projects/梦想工程·爱在边疆2024年11月项目动态)（已核读正文或附件并提取重点指标）\n2. [梦想工程·爱在边疆2024年10月项目动态](https://www.adream.org/dream_projects/梦想工程·爱在边疆2024年10月项目动态)（仅收录目录标题和链接，未逐篇提取）\n3. [梦想工程·爱在边疆2024年9月项目动态](https://www.adream.org/dream_projects/梦想工程·爱在边疆2024年9月项目动态)（仅收录目录标题和链接，未逐篇提取）\n4. [梦想工程·爱在边疆2024年8月项目动态](https://www.adream.org/dream_projects/梦想工程·爱在边疆2024年8月项目动态)（仅收录目录标题和链接，未逐篇提取）\n5. [梦想工程·爱在边疆2024年7月项目动态](https://www.adream.org/dream_projects/梦想工程·爱在边疆2024年7月项目动态)（仅收录目录标题和链接，未逐篇提取）\n6. [梦想工程·爱在边疆2024年6月项目动态](https://www.adream.org/dream_projects/梦想工程·爱在边疆2024年6月项目动态)（仅收录目录标题和链接，未逐篇提取）",
+      "media": [
+        {
+          "resource_key": "updates"
+        }
+      ]
+    },
+    {
+      "key": "sources",
+      "kind": "other",
+      "title": "数据来源",
+      "body": "- [爱在边疆-介绍](https://www.adream.org/dream_projects/爱在边疆-介绍)（来源编号：border_intro；核查日期：2026-10-30）\n- [爱在边疆-动态](https://www.adream.org/dream-projects/爱在边疆-动态)（来源编号：border_updates；核查日期：2026-10-30）\n- [梦想工程·爱在边疆2024年11月项目动态](https://www.adream.org/dream_projects/梦想工程·爱在边疆2024年11月项目动态)（来源编号：border_202411_article；核查日期：2026-10-30）\n- [2024年11月项目活动报告：爱在边疆·点亮国门（10页）](https://www.adream.org/wp-content/uploads/2024/12/2024-12-04-09223499.pdf)（来源编号：border_202411_pdf；核查日期：2026-10-30）",
+      "media": [
+        {
+          "resource_key": "source-border_intro"
+        },
+        {
+          "resource_key": "source-border_updates"
+        },
+        {
+          "resource_key": "source-border_202411_article"
+        },
+        {
+          "resource_key": "source-border_202411_pdf"
+        }
+      ]
+    },
+    {
+      "key": "package-files",
+      "kind": "other",
+      "title": "数据包原始文件",
+      "body": "数据包提供的项目说明、结构化数据及指标表。",
+      "media": [
+        {
+          "resource_key": "project-description"
+        },
+        {
+          "resource_key": "project-data"
+        },
+        {
+          "resource_key": "metrics"
+        }
+      ]
+    }
+  ]
+}

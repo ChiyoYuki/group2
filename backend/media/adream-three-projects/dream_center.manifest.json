@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "dataset": {
+    "key": "adream-three-projects",
+    "version": 1
+  },
+  "project": {
+    "slug": "adream-dream-center",
+    "title": "梦想工程·梦想中心",
+    "short_title": "梦想中心",
+    "summary": "以学校教室改造为基础，结合素养课程、教师培养与交流平台支持教学。7.0版增加互动录播和答题设备；另有移动服务形式梦想大篷车。",
+    "background": "机构：上海真爱梦想公益基金会\n服务对象：学校师生及教育管理者\n服务模式：学习空间 + 梦想课程 + 教师发展；总览页同时列出梦想盒子、五星教师培养和梦想沙龙。\n启动情况：所查介绍未明确整个项目启动年月；7.0版于2021年7月落地。\n资料范围：介绍页含截至2023-12累计数据；同时提取动态目录首篇简报的活动指标。",
+    "team_name": "上海真爱梦想公益基金会",
+    "content_kind": "documented",
+    "content_notice": "项目介绍、动态首页索引、每个项目目录首篇简报重点数据及奉新培训报道\n范围：用户确认的前三个项目；梦想师范班未纳入。提取各项目介绍、当前动态目录，以及目录首篇简报的重点数值；一县一梦想另核读奉新培训报道。并非全站全部历史文章或内部数据库导出。\n核查日期为2026-10-30（Asia/Shanghai），不是数据统计截止日期。介绍和简报中的历史日期分别保留。\n动态目录首条分别为梦想中心2025年5月、爱在边疆2024年11月、一县一梦想2024年9—10月，仅描述本次所查目录，不代表全站不存在更近期资料。\n指标的value应结合unit理解；部分数据已换算为基本单位，原文币种不明的金额保留原单位。约、超过、多于等含义保存在qualifier；带限定词的value不能当精确总量；范围值保留raw_value，value为空。\nnull或空白表示所查来源未披露/不适用，不表示0。未披露的总筹资或总受益人数不估算、不补零。\n人次、人数、师生合计和教师人数为不同口径；不同子项目、地区和活动可能重叠，不作加总。\n去远方的筹资和受益数据只属于去远方子项目，不是整个一县一梦想的累计总量。\n国门学校100所属于政策背景目标，不作为爱在边疆成效；三年、1+1+5+X为项目方案参数。\n爱在边疆原文同时写每组5所县域学校和1所项目学校加3—4所辐射校，保留该差异，未自行修正。\nPDF页码为文件页序，从1起，含封面；PDF发布日期采用其官方承载文章标注日期。数据来自可提取文字；图像中的未读信息不推测。\n资料整理为事实数据及简明归纳，附原网页和PDF链接供核验；不包含原网页全文、照片或完整原始简报。\n服务和成效由官网自报，本包仅核对来源，未独立审计。金额若原文未标币种，则保留原文单位。",
+    "content_tags": [
+      "真爱梦想",
+      "教育公益",
+      "公开资料"
+    ],
+    "research_methods": "整理项目官网介绍、动态目录及已核读简报；核查日期：2026-10-30（Asia/Shanghai）。",
+    "is_demo": false,
+    "status": "draft"
+  },
+  "themes": [
+    {
+      "slug": "education-philanthropy",
+      "name": "教育公益",
+      "description": "教育公益项目与素养教育实践"
+    }
+  ],
+  "questions": [],
+  "stages": [],
+  "resources": [
+    {
+      "key": "project-data",
+      "title": "项目结构化数据（原始 JSON）",
+      "type": {
+        "code": "source-data",
+        "name": "结构化数据"
+      },
+      "filename": "dream_center/项目数据.json",
+      "usage_role": "reference",
+      "description": "数据包原始记录；核查日期：2026-10-30。",
+      "source_name": "真爱梦想三个项目数据包",
+      "original_url": "https://www.adream.org/projects/梦想中心"
+    },
+    {
+      "key": "metrics",
+      "title": "关键指标（22 项）",
+      "type": {
+        "code": "data-table",
+        "name": "数据表格"
+      },
+      "filename": "dream_center/关键指标.csv",
+      "usage_role": "output",
+      "description": "保留原始数值、标准化数值、单位、限定词、统计范围、指标性质及来源。",
+      "source_name": "真爱梦想三个项目数据包",
+      "original_url": "https://www.adream.org/projects/梦想中心"
+    },
+    {
+      "key": "project-description",
+      "title": "项目说明（数据包原文）",
+      "type": {
+        "code": "document",
+        "name": "说明文档"
+      },
+      "filename": "dream_center/项目说明.md",
+      "usage_role": "reference",
+      "source_name": "真爱梦想三个项目数据包",
+      "original_url": "https://www.adream.org/projects/梦想中心"
+    },
+    {
+      "key": "components",
+      "title": "服务与子项目（4 项）",
+      "type": {
+        "code": "data-table",
+        "name": "数据表格"
+      },
+      "url": "https://www.adream.org/projects/梦想中心",
+      "usage_role": "output",
+      "description": "服务项目、对象、活动、合作方及来源。",
+      "source_name": "上海真爱梦想公益基金会",
+      "source_url": "https://www.adream.org/projects/梦想中心",
+      "original_url": "https://www.adream.org/projects/梦想中心",
+      "structured_data": {
+        "columns": [
+          "project_id",
+          "name",
+          "category",
+          "target",
+          "activities",
+          "partners",
+          "source_id",
+          "project_name",
+          "source_url"
+        ],
+        "rows": [
+          [
+            "dream_center",
+            "学习空间",
+            "硬件及教室",
+            "学校师生",
+            "改造教室，提供图书、平板及多媒体设施，支持互动学习。",
+            "按学校和捐赠项目安排，未提取统一名单。",
+            "M02",
+            "梦想工程·梦想中心",
+            "https://www.adream.org/projects/梦想中心"
+          ],
+          [
+            "dream_center",
+            "梦想课程",
+            "课程",
+            "学生",
+            "以体验、协作和探究方式发展关键能力，与学校课程配合。",
+            "所查页面未列统一合作方。",
+            "M01",
+            "梦想工程·梦想中心",
+            "https://www.adream.org/project"
+          ],
+          [
+            "dream_center",
+            "教师发展支持",
+            "教师培养",
+            "教师及教育管理者",
+            "包含分星级教师培养、培训及相关工作坊等。",
+            "所查页面未列统一合作方。",
+            "M01",
+            "梦想工程·梦想中心",
+            "https://www.adream.org/project"
+          ],
+          [
+            "dream_center",
+            "梦想大篷车",
+            "移动服务",
+            "沿线学校师生",
+            "携带阅读、多媒体与课堂器材入校，开展流动课程体验。",
+            "合作随巡回活动而异。",
+            "M02",
+            "梦想工程·梦想中心",
+            "https://www.adream.org/projects/梦想中心"
+          ]
+        ]
+      }
+    },
+    {
+      "key": "updates",
+      "title": "动态目录（6 条）",
+      "type": {
+        "code": "data-table",
+        "name": "数据表格"
+      },
+      "url": "https://www.adream.org/dream-projects/dream-center",
+      "usage_role": "reference",
+      "description": "保留目录顺序、核读状态、链接和核查日期。",
+      "source_name": "上海真爱梦想公益基金会",
+      "source_url": "https://www.adream.org/dream-projects/dream-center",
+      "original_url": "https://www.adream.org/dream-projects/dream-center",
+      "structured_data": {
+        "columns": [
+          "project_id",
+          "project_name",
+          "title",
+          "url",
+          "listing_order",
+          "extraction_status",
+          "directory_source_id",
+          "retrieved_date"
+        ],
+        "rows": [
+          [
+            "dream_center",
+            "梦想工程·梦想中心",
+            "梦想工程·梦想中心2025年5月工作简报",
+            "https://www.adream.org/dream_projects/梦想工程·梦想中心2025年5月工作简报",
+            "1",
+            "已核读正文或附件并提取重点指标",
+            "M03",
+            "2026-10-30"
+          ],
+          [
+            "dream_center",
+            "梦想工程·梦想中心",
+            "梦想工程·梦想中心2025年4月工作简报",
+            "https://www.adream.org/dream_projects/梦想工程·梦想中心2025年4月工作简报",
+            "2",
+            "仅收录目录标题和链接，未逐篇提取",
+            "M03",
+            "2026-10-30"
+          ],
+          [
+            "dream_center",
+            "梦想工程·梦想中心",
+            "梦想工程·梦想中心2025年3月工作简报",
+            "https://www.adream.org/dream_projects/梦想工程·梦想中心2025年3月工作简报",
+            "3",
+            "仅收录目录标题和链接，未逐篇提取",
+            "M03",
+            "2026-10-30"
+          ],
+          [
+            "dream_center",
+            "梦想工程·梦想中心",
+            "梦想工程·梦想中心2025年1-2月工作简报",
+            "https://www.adream.org/dream_projects/梦想工程·梦想中心2025年1-2月工作简报",
+            "4",
+            "仅收录目录标题和链接，未逐篇提取",
+            "M03",
+            "2026-10-30"
+          ],
+          [
+            "dream_center",
+            "梦想工程·梦想中心",
+            "梦想工程·梦想中心12月工作简报",
+            "https://www.adream.org/dream_projects/梦想工程·梦想中心12月工作简报",
+            "5",
+            "仅收录目录标题和链接，未逐篇提取",
+            "M03",
+            "2026-10-30"
+          ],
+          [
+            "dream_center",
+            "梦想工程·梦想中心",
+            "梦想工程·梦想中心11月工作简报",
+            "https://www.adream.org/dream_projects/梦想工程·梦想中心11月工作简报",
+            "6",
+            "仅收录目录标题和链接，未逐篇提取",
+            "M03",
+            "2026-10-30"
+          ]
+        ]
+      }
+    },
+    {
+      "key": "source-A01",
+      "title": "梦想工程总览",
+      "type": {
+        "code": "source-link",
+        "name": "来源链接"
+      },
+      "url": "https://www.adream.org/dream-projects",
+      "usage_role": "reference",
+      "description": "来源编号：A01\n核查日期：2026-10-30",
+      "source_name": "上海真爱梦想公益基金会",
+      "source_url": "https://www.adream.org/dream-projects",
+      "original_url": "https://www.adream.org/dream-projects",
+      "provenance_note": null
+    },
+    {
+      "key": "source-M01",
+      "title": "自主项目：梦想中心、梦想课程、真爱学院",
+      "type": {
+        "code": "source-link",
+        "name": "来源链接"
+      },
+      "url": "https://www.adream.org/project",
+      "usage_role": "reference",
+      "description": "来源编号：M01\n核查日期：2026-10-30",
+      "source_name": "上海真爱梦想公益基金会",
+      "source_url": "https://www.adream.org/project",
+      "original_url": "https://www.adream.org/project",
+      "provenance_note": null
+    },
+    {
+      "key": "source-M02",
+      "title": "梦想中心介绍",
+      "type": {
+        "code": "source-link",
+        "name": "来源链接"
+      },
+      "url": "https://www.adream.org/projects/梦想中心",
+      "usage_role": "reference",
+      "description": "来源编号：M02\n发布日期：2021-09-25\n核查日期：2026-10-30\n页面首发日期为2021-09-25，正文含截至2023-12的数据，不能把首发日期当统计截止日。",
+      "source_name": "上海真爱梦想公益基金会",
+      "source_url": "https://www.adream.org/projects/梦想中心",
+      "original_url": "https://www.adream.org/projects/梦想中心",
+      "provenance_note": "页面首发日期为2021-09-25，正文含截至2023-12的数据，不能把首发日期当统计截止日。"
+    },
+    {
+      "key": "source-M03",
+      "title": "梦想中心动态目录",
+      "type": {
+        "code": "source-link",
+        "name": "来源链接"
+      },
+      "url": "https://www.adream.org/dream-projects/dream-center",
+      "usage_role": "reference",
+      "description": "来源编号：M03\n核查日期：2026-10-30",
+      "source_name": "上海真爱梦想公益基金会",
+      "source_url": "https://www.adream.org/dream-projects/dream-center",
+      "original_url": "https://www.adream.org/dream-projects/dream-center",
+      "provenance_note": null
+    },
+    {
+      "key": "source-M04",
+      "title": "梦想工程·梦想中心2025年5月工作简报",
+      "type": {
+        "code": "source-link",
+        "name": "来源链接"
+      },
+      "url": "https://www.adream.org/dream_projects/梦想工程·梦想中心2025年5月工作简报",
+      "usage_role": "reference",
+      "description": "来源编号：M04\n发布日期：2025-06-02\n核查日期：2026-10-30",
+      "source_name": "上海真爱梦想公益基金会",
+      "source_url": "https://www.adream.org/dream_projects/梦想工程·梦想中心2025年5月工作简报",
+      "original_url": "https://www.adream.org/dream_projects/梦想工程·梦想中心2025年5月工作简报",
+      "provenance_note": null
+    },
+    {
+      "key": "source-M05",
+      "title": "梦想中心2025年5月工作简报（11页PDF）",
+      "type": {
+        "code": "source-link",
+        "name": "来源链接"
+      },
+      "url": "https://www.adream.org/wp-content/uploads/2025/06/2025-08-21-02495245.pdf",
+      "usage_role": "reference",
+      "description": "来源编号：M05\n发布日期：2025-06-02\n核查日期：2026-10-30\n日期采用承载文章标注日期；PDF文件名含2025-08-21，不能据文件名改写报告期或发布日期。",
+      "source_name": "上海真爱梦想公益基金会",
+      "source_url": "https://www.adream.org/wp-content/uploads/2025/06/2025-08-21-02495245.pdf",
+      "original_url": "https://www.adream.org/wp-content/uploads/2025/06/2025-08-21-02495245.pdf",
+      "provenance_note": "日期采用承载文章标注日期；PDF文件名含2025-08-21，不能据文件名改写报告期或发布日期。"
+    }
+  ],
+  "sections": [
+    {
+      "key": "overview",
+      "kind": "opening",
+      "title": "项目概况",
+      "body": "机构：上海真爱梦想公益基金会\n服务对象：学校师生及教育管理者\n服务模式：学习空间 + 梦想课程 + 教师发展；总览页同时列出梦想盒子、五星教师培养和梦想沙龙。\n启动情况：所查介绍未明确整个项目启动年月；7.0版于2021年7月落地。\n资料范围：介绍页含截至2023-12累计数据；同时提取动态目录首篇简报的活动指标。"
+    },
+    {
+      "key": "components",
+      "kind": "output",
+      "title": "服务与子项目",
+      "body": "### 学习空间\n类别：硬件及教室\n对象：学校师生\n活动：改造教室，提供图书、平板及多媒体设施，支持互动学习。\n合作方：按学校和捐赠项目安排，未提取统一名单。\n来源：M02\n\n### 梦想课程\n类别：课程\n对象：学生\n活动：以体验、协作和探究方式发展关键能力，与学校课程配合。\n合作方：所查页面未列统一合作方。\n来源：M01\n\n### 教师发展支持\n类别：教师培养\n对象：教师及教育管理者\n活动：包含分星级教师培养、培训及相关工作坊等。\n合作方：所查页面未列统一合作方。\n来源：M01\n\n### 梦想大篷车\n类别：移动服务\n对象：沿线学校师生\n活动：携带阅读、多媒体与课堂器材入校，开展流动课程体验。\n合作方：合作随巡回活动而异。\n来源：M02",
+      "media": [
+        {
+          "resource_key": "components"
+        }
+      ]
+    },
+    {
+      "key": "metrics",
+      "kind": "output",
+      "title": "关键指标",
+      "body": "共 22 项指标。数值须结合单位、限定词、统计范围和原始表述理解；完整字段见关联 CSV。",
+      "media": [
+        {
+          "resource_key": "metrics"
+        }
+      ]
+    },
+    {
+      "key": "updates",
+      "kind": "other",
+      "title": "动态目录",
+      "body": "1. [梦想工程·梦想中心2025年5月工作简报](https://www.adream.org/dream_projects/梦想工程·梦想中心2025年5月工作简报)（已核读正文或附件并提取重点指标）\n2. [梦想工程·梦想中心2025年4月工作简报](https://www.adream.org/dream_projects/梦想工程·梦想中心2025年4月工作简报)（仅收录目录标题和链接，未逐篇提取）\n3. [梦想工程·梦想中心2025年3月工作简报](https://www.adream.org/dream_projects/梦想工程·梦想中心2025年3月工作简报)（仅收录目录标题和链接，未逐篇提取）\n4. [梦想工程·梦想中心2025年1-2月工作简报](https://www.adream.org/dream_projects/梦想工程·梦想中心2025年1-2月工作简报)（仅收录目录标题和链接，未逐篇提取）\n5. [梦想工程·梦想中心12月工作简报](https://www.adream.org/dream_projects/梦想工程·梦想中心12月工作简报)（仅收录目录标题和链接，未逐篇提取）\n6. [梦想工程·梦想中心11月工作简报](https://www.adream.org/dream_projects/梦想工程·梦想中心11月工作简报)（仅收录目录标题和链接，未逐篇提取）",
+      "media": [
+        {
+          "resource_key": "updates"
+        }
+      ]
+    },
+    {
+      "key": "sources",
+      "kind": "other",
+      "title": "数据来源",
+      "body": "- [梦想工程总览](https://www.adream.org/dream-projects)（来源编号：A01；核查日期：2026-10-30）\n- [自主项目：梦想中心、梦想课程、真爱学院](https://www.adream.org/project)（来源编号：M01；核查日期：2026-10-30）\n- [梦想中心介绍](https://www.adream.org/projects/梦想中心)（来源编号：M02；核查日期：2026-10-30）\n- [梦想中心动态目录](https://www.adream.org/dream-projects/dream-center)（来源编号：M03；核查日期：2026-10-30）\n- [梦想工程·梦想中心2025年5月工作简报](https://www.adream.org/dream_projects/梦想工程·梦想中心2025年5月工作简报)（来源编号：M04；核查日期：2026-10-30）\n- [梦想中心2025年5月工作简报（11页PDF）](https://www.adream.org/wp-content/uploads/2025/06/2025-08-21-02495245.pdf)（来源编号：M05；核查日期：2026-10-30）",
+      "media": [
+        {
+          "resource_key": "source-A01"
+        },
+        {
+          "resource_key": "source-M01"
+        },
+        {
+          "resource_key": "source-M02"
+        },
+        {
+          "resource_key": "source-M03"
+        },
+        {
+          "resource_key": "source-M04"
+        },
+        {
+          "resource_key": "source-M05"
+        }
+      ]
+    },
+    {
+      "key": "package-files",
+      "kind": "other",
+      "title": "数据包原始文件",
+      "body": "数据包提供的项目说明、结构化数据及指标表。",
+      "media": [
+        {
+          "resource_key": "project-description"
+        },
+        {
+          "resource_key": "project-data"
+        },
+        {
+          "resource_key": "metrics"
+        }
+      ]
+    }
+  ]
+}

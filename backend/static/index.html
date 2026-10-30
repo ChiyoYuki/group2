@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>项目平台</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: #17202a;
+      background: #f4f6f8;
+    }
+    main { width: min(92%, 560px); margin: 48px auto; }
+    header { margin-bottom: 24px; text-align: center; }
+    h1 { margin: 0 0 8px; font-size: 30px; }
+    h2 { margin-top: 0; font-size: 21px; }
+    p { line-height: 1.6; }
+    .muted { color: #66717e; }
+    .card {
+      padding: 28px;
+      border: 1px solid #e1e6eb;
+      border-radius: 14px;
+      background: white;
+      box-shadow: 0 8px 30px rgb(23 32 42 / 6%);
+    }
+    .tabs { display: flex; gap: 8px; margin-bottom: 24px; }
+    .tabs button { flex: 1; background: #eef1f4; color: #46515d; }
+    .tabs button.active { background: #2457d6; color: white; }
+    form { display: grid; gap: 16px; }
+    label { display: grid; gap: 7px; font-size: 14px; font-weight: 600; }
+    input, textarea, button { font: inherit; }
+    input, textarea {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid #cbd3dc;
+      border-radius: 8px;
+      background: white;
+    }
+    textarea { min-height: 90px; resize: vertical; }
+    input:focus, textarea:focus { outline: 3px solid rgb(36 87 214 / 15%); border-color: #2457d6; }
+    button {
+      padding: 11px 16px;
+      border: 0;
+      border-radius: 8px;
+      color: white;
+      background: #2457d6;
+      cursor: pointer;
+    }
+    button:hover { background: #1946b5; }
+    button:disabled { opacity: .55; cursor: wait; }
+    .secondary { width: auto; color: #46515d; background: #eef1f4; }
+    .account { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .account p { margin: 0; }
+    #message { min-height: 24px; margin: 18px 0 0; }
+    #message.error { color: #b42318; }
+    #message.success { color: #067647; }
+    #published { margin-top: 16px; }
+    [hidden] { display: none !important; }
+    @media (max-width: 520px) {
+      main { margin: 24px auto; }
+      .card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>项目平台</h1>
+      <p class="muted">注册账号，登录并发布你的项目</p>
+    </header>
+
+    <section id="auth-card" class="card">
+      <div class="tabs">
+        <button id="login-tab" class="active" type="button">登录</button>
+        <button id="register-tab" type="button">注册</button>
+      </div>
+      <form id="login-form">
+        <h2>登录账号</h2>
+        <label>用户名
+          <input name="username" required minlength="3" maxlength="50" autocomplete="username">
+        </label>
+        <label>密码
+          <input name="password" type="password" required minlength="8" maxlength="128" autocomplete="current-password">
+        </label>
+        <button type="submit">登录</button>
+      </form>
+      <form id="register-form" hidden>
+        <h2>创建账号</h2>
+        <label>用户名
+          <input name="username" required minlength="3" maxlength="50" autocomplete="username">
+        </label>
+        <label>密码（至少 8 个字符）
+          <input name="password" type="password" required minlength="8" maxlength="128" autocomplete="new-password">
+        </label>
+        <button type="submit">注册并登录</button>
+      </form>
+    </section>
+
+    <section id="project-card" class="card" hidden>
+      <div class="account">
+        <p>当前账号：<strong id="current-user"></strong></p>
+        <button id="logout" class="secondary" type="button">退出</button>
+      </div>
+      <hr>
+      <h2>上传项目</h2>
+      <p class="muted">提交后项目会立即公开。</p>
+      <form id="project-form">
+        <label>项目标题
+          <input name="title" required maxlength="200">
+        </label>
+        <label>项目简介
+          <textarea name="summary" required maxlength="2000"></textarea>
+        </label>
+        <label>项目说明（可选）
+          <textarea name="description" maxlength="20000"></textarea>
+        </label>
+        <label>附件（可选，最大 8 MB）
+          <input name="file" type="file" accept=".txt,.md,.csv,.jpg,.jpeg,.png,.webp,.mp3,.wav,.ogg,.mp4,.webm">
+        </label>
+        <button type="submit">发布项目</button>
+      </form>
+      <p id="published" hidden><a id="published-link" target="_blank" rel="noreferrer">查看已发布项目</a></p>
+    </section>
+    <p id="message" role="status"></p>
+  </main>
+
+  <script>
+    const authCard = document.querySelector('#auth-card');
+    const projectCard = document.querySelector('#project-card');
+    const loginForm = document.querySelector('#login-form');
+    const registerForm = document.querySelector('#register-form');
+    const projectForm = document.querySelector('#project-form');
+    const message = document.querySelector('#message');
+    let token = localStorage.getItem('project_token') || '';
+    let username = localStorage.getItem('project_username') || '';
+
+    function showMessage(text, error = false) {
+      message.textContent = text;
+      message.className = error ? 'error' : 'success';
+    }
+
+    function selectAuth(login) {
+      document.querySelector('#login-tab').classList.toggle('active', login);
+      document.querySelector('#register-tab').classList.toggle('active', !login);
+      loginForm.hidden = !login;
+      registerForm.hidden = login;
+      showMessage('');
+    }
+
+    function showAccount() {
+      const loggedIn = Boolean(token && username);
+      authCard.hidden = loggedIn;
+      projectCard.hidden = !loggedIn;
+      document.querySelector('#current-user').textContent = username;
+    }
+
+    async function request(path, payload, auth = false) {
+      const headers = {'Content-Type': 'application/json'};
+      if (auth) headers.Authorization = `Bearer ${token}`;
+      const response = await fetch(path, {method: 'POST', headers, body: JSON.stringify(payload)});
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || '操作失败，请稍后重试。');
+      return data;
+    }
+
+    async function authenticate(event, path) {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const button = form.querySelector('button[type="submit"]');
+      button.disabled = true;
+      showMessage('正在处理…');
+      try {
+        const data = Object.fromEntries(new FormData(form));
+        const result = await request(path, data);
+        token = result.token;
+        username = result.user.username;
+        localStorage.setItem('project_token', token);
+        localStorage.setItem('project_username', username);
+        form.reset();
+        showAccount();
+        showMessage('登录成功，可以上传项目了。');
+      } catch (error) {
+        showMessage(error.message, true);
+      } finally {
+        button.disabled = false;
+      }
+    }
+
+    document.querySelector('#login-tab').addEventListener('click', () => selectAuth(true));
+    document.querySelector('#register-tab').addEventListener('click', () => selectAuth(false));
+    loginForm.addEventListener('submit', event => authenticate(event, '/api/v1/auth/login'));
+    registerForm.addEventListener('submit', event => authenticate(event, '/api/v1/auth/register'));
+    document.querySelector('#logout').addEventListener('click', () => {
+      token = '';
+      username = '';
+      localStorage.removeItem('project_token');
+      localStorage.removeItem('project_username');
+      selectAuth(true);
+      showAccount();
+      showMessage('已退出当前账号。');
+    });
+
+    projectForm.addEventListener('submit', async event => {
+      event.preventDefault();
+      const button = projectForm.querySelector('button[type="submit"]');
+      const file = projectForm.elements.file.files[0];
+      if (file && file.size > 8 * 1024 * 1024) {
+        showMessage('附件不能超过 8 MB。', true);
+        return;
+      }
+      button.disabled = true;
+      showMessage('正在发布…');
+      try {
+        const payload = {
+          title: projectForm.elements.title.value,
+          summary: projectForm.elements.summary.value,
+          description: projectForm.elements.description.value
+        };
+        if (file) {
+          const dataUrl = await new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = () => reject(new Error('附件读取失败。'));
+            reader.readAsDataURL(file);
+          });
+          payload.file = {name: file.name, content_base64: dataUrl.split(',', 2)[1]};
+        }
+        const result = await request('/api/v1/projects', payload, true);
+        projectForm.reset();
+        const link = document.querySelector('#published-link');
+        link.href = `/api/v1/projects/${encodeURIComponent(result.slug)}`;
+        document.querySelector('#published').hidden = false;
+        showMessage(`项目“${result.title}”已发布。`);
+      } catch (error) {
+        showMessage(error.message, true);
+      } finally {
+        button.disabled = false;
+      }
+    });
+
+    showAccount();
+  </script>
+</body>
+</html>

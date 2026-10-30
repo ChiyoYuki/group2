@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python - <<'PY'\nimport json\nimport zipfile\nfrom pathlib import Path\n\narchive = Path\\('./真爱梦想_三个项目数据包_2026-10-30.zip'\\)\nwith zipfile.ZipFile\\(archive\\) as zf:\n    names = {info.filename.encode\\('cp437'\\).decode\\('utf-8'\\): info.filename for info in zf.infolist\\(\\)}\n    for name, raw_name in names.items\\(\\):\n        if name.endswith\\(\\('00_先读我.md', '字段说明.json'\\)\\):\n            print\\(f'===== {name} ====='\\)\n            print\\(zf.read\\(raw_name\\).decode\\('utf-8-sig'\\)\\)\n    data_name = next\\(raw for name, raw in names.items\\(\\) if name.endswith\\('全部数据.json'\\)\\)\n    data = json.loads\\(zf.read\\(data_name\\).decode\\('utf-8-sig'\\)\\)\n    print\\('===== 全部数据.json 结构 ====='\\)\n    print\\('顶层键:', list\\(data\\)\\)\n    for key, value in data.items\\(\\):\n        if isinstance\\(value, list\\):\n            print\\(f'{key}: list[{len\\(value\\)}]'\\)\n            if value:\n                print\\('  首项键:', list\\(value[0]\\) if isinstance\\(value[0], dict\\) else type\\(value[0]\\).__name__\\)\n                print\\('  首项:', json.dumps\\(value[0], ensure_ascii=False, indent=2\\)\\)\n        elif isinstance\\(value, dict\\):\n            print\\(f'{key}: dict keys={list\\(value\\)}'\\)\n            print\\(json.dumps\\(value, ensure_ascii=False, indent=2\\)[:5000]\\)\n        else:\n            print\\(f'{key}: {value!r}'\\)\nPY)"
+    ]
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "slug": "miao-culture-needlework",
+  "title": "用针线传承的民族文化",
+  "summary": "从观察苗绣花纹开始，把对苗族服饰的好奇画成一张手抄报。",
+  "background": "我们看到苗族衣服上有好多漂亮的花纹，有的像蝴蝶，有的像小鸟。我们很好奇，这些花纹是怎么做出来的？于是，我们决定研究苗绣，也了解一下银饰和蜡染，把发现做成一张手抄报。",
+  "content_kind": "reconstructed",
+  "content_notice": "过程根据成果合理重构；网络配图来自其他活动，仅作过程参考。\n起因、过程、困难与学习收获均为依据成果重构的原型文案，未采集真实活动记录或学生反馈。研究问题暂无独立核实的答案。",
+  "cohort_id": null,
+  "location": null,
+  "team_name": null,
+  "is_demo": true,
+  "content_tags": [
+    "苗绣",
+    "苗族服饰",
+    "银饰",
+    "蜡染",
+    "手抄报"
+  ],
+  "themes": [
+    {
+      "slug": "ethnic-culture",
+      "name": "民族文化"
+    },
+    {
+      "slug": "traditional-crafts",
+      "name": "传统手工艺"
+    },
+    {
+      "slug": "intangible-heritage",
+      "name": "非遗"
+    }
+  ],
+  "questions": [
+    {
+      "topic": "苗绣",
+      "question": "苗绣有哪些针法，漂亮的花纹是怎样绣出来的？"
+    },
+    {
+      "topic": "银饰",
+      "question": "苗族银饰有哪些样子，在服饰中怎样搭配？"
+    },
+    {
+      "topic": "蜡染",
+      "question": "蜡染的图案是怎样做出来的，它和刺绣有什么不同？"
+    }
+  ],
+  "methods": [
+    {
+      "label": "查找资料",
+      "description": "了解苗绣、银饰和蜡染的基本知识。"
+    },
+    {
+      "label": "观察制作",
+      "description": "看工具怎样使用，留意制作时的动作和顺序。"
+    },
+    {
+      "label": "对照图片",
+      "description": "寻找不同图案的形状、颜色和相似的地方。"
+    },
+    {
+      "label": "整理记录",
+      "description": "把想知道的问题和查到的内容分开记，再用自己的话归纳。"
+    }
+  ],
+  "stages": [
+    {
+      "position": 1,
+      "title": "先把问题写下来",
+      "description": "我们想知道的事情太多了，所以先把问题写下来，分成苗绣、银饰和蜡染三类。这样，接下来观察和查资料时，就知道要找什么了。",
+      "method_tags": [
+        "查找资料",
+        "整理记录"
+      ],
+      "source_file": "03_过程文字/01_先把问题写下来.txt"
+    },
+    {
+      "position": 2,
+      "title": "带着问题观察",
+      "description": "我们先观察刺绣时要用哪些工具，再仔细看针和线是怎么穿过布的。看不明白的地方，我们就记下来。原来看起来很漂亮的花纹，需要一针一针慢慢绣出来。",
+      "method_tags": [
+        "观察制作"
+      ],
+      "source_file": "03_过程文字/02_带着问题观察.txt"
+    },
+    {
+      "position": 3,
+      "title": "自己动手试一试",
+      "description": "看完以后，我们也想试一试。我们先选一个简单的图案，把大概的形状画出来，再一点点补上细节。自己动手以后才发现，看起来简单的线条，画好也需要耐心。",
+      "method_tags": [
+        "对照图片"
+      ],
+      "source_file": "03_过程文字/03_自己动手试一试.txt"
+    },
+    {
+      "position": 4,
+      "title": "遇到困难，分开来画",
+      "description": "有些花纹太复杂，我们一开始不知道从哪里画。后来，我们先找出大的形状，再慢慢画里面的小花纹。大家也会互相看看，哪里画得太挤了，就一起想办法改一改。",
+      "method_tags": [
+        "对照图片"
+      ],
+      "source_file": "03_过程文字/04_遇到困难，分开来画.txt",
+      "challenges": "花纹很复杂，不知道从哪里画。",
+      "responses": "先找大形状，再慢慢加小花纹。"
+    },
+    {
+      "position": 5,
+      "title": "整理我们的发现",
+      "description": "我们把找到的资料和记录放在一起，分成苗绣、银饰和蜡染三部分。有些介绍太长了，我们就挑最想告诉大家的内容，用自己的话写下来。不确定的地方，再找资料确认一下。",
+      "method_tags": [
+        "查找资料",
+        "整理记录"
+      ],
+      "source_file": "03_过程文字/05_整理我们的发现.txt",
+      "challenges": "资料很多，有些话太长、太难懂。",
+      "responses": "挑最重要的内容，用自己的话写下来；不确定的地方继续查。"
+    },
+    {
+      "position": 6,
+      "title": "制作手抄报",
+      "description": "开始画手抄报时，我们发现想写的内容太多了。于是，我们先分好位置，把制作步骤放在上面，把问题和发现写在下面，右边留给苗族人物。安排好以后，再慢慢画画、写字和涂颜色。",
+      "method_tags": [
+        "整理记录"
+      ],
+      "source_file": "03_过程文字/06_制作手抄报.txt",
+      "challenges": "想写的内容太多，一张纸放不下。",
+      "responses": "先安排各部分的位置，再挑选文字和图画。"
+    },
+    {
+      "position": 7,
+      "title": "把作品讲给大家听",
+      "description": "手抄报完成以后，我们按照先提问题、再讲过程、最后说发现的顺序介绍作品。我们希望同学们看完以后，也会对苗族的服饰和手艺感兴趣。",
+      "method_tags": [
+        "整理记录"
+      ],
+      "source_file": "03_过程文字/07_把作品讲给大家听.txt"
+    }
+  ],
+  "learning_outcomes": "以前，我们只觉得苗族服饰很好看。做完这个项目，我们发现小小的花纹里也有故事，做手工还需要很多耐心。我们也学会了先提出问题，再找资料，最后用自己的话把发现讲清楚。",
+  "practical_tips": "先把问题分类，再带着问题观察；复杂图案先画大形状再补细节；资料过长时，用自己的话整理，不确定的内容继续查证；制作手抄报前，先安排版面。",
+  "featured_reason": "从苗绣、银饰和蜡染的好奇出发，展示提问、观察、创作与表达的七步重构过程。",
+  "assets": [
+    {
+      "source_file": "04_成果与收获/01_最终成果原图.jpg",
+      "filename": "final-artwork.jpg",
+      "width": 1280,
+      "height": 886,
+      "file_size_bytes": 256287,
+      "sha256": "910f9ebc34c2a5c662165beca102aed7f9bd9e97b7c591f5cc27cb7b8feae07b",
+      "title": "用针线传承的民族文化 · 手绘手抄报",
+      "caption": "这张手抄报展示了苗绣、银饰和蜡染相关的研究问题、方法与发现，并用小图示意制作过程。右侧的人物插画展示了苗族服饰的色彩和装饰特点。",
+      "alt_text": "用户提供的苗族文化手抄报原图，包含苗绣、银饰、蜡染的研究问题、方法与人物插画。",
+      "usage_role": "output",
+      "stage": null,
+      "source_name": "用户提供的最终成果图",
+      "source_url": null,
+      "creator_credit": null,
+      "original_activity": null,
+      "provenance_note": "最终成果图原样保留，包括图中的署名和日期；不据此推断未经确认的项目身份或时间。",
+      "rights_status": "unconfirmed",
+      "rights_note": "用户提供，未额外确认公开转载许可。"
+    },
+    {
+      "source_file": "05_参考图片/01_小学生学习苗绣_参考.jpg",
+      "filename": "embroidery-reference.jpg",
+      "width": 800,
+      "height": 538,
+      "file_size_bytes": 129496,
+      "sha256": "92e6729aa3ed5cd6164dcba5b46492425bf0c94935d5706b2af0082ea073e839",
+      "title": "过程参考图：老师指导小学生学习苗绣",
+      "caption": "过程参考图：老师指导小学生学习苗绣。",
+      "alt_text": "过程参考图：老师指导小学生学习苗绣。",
+      "usage_role": "reference",
+      "stage": 2,
+      "suggested_stage": 2,
+      "source_name": "金台资讯／新浪网",
+      "source_url": "https://k.sina.com.cn/article_6824573189_196c6b90502001l281.html",
+      "original_url": "https://n.sinaimg.cn/sinakd20230216s/538/w800h538/20230216/f846-fc9ae216d435988ce46b3a0fead26084.jpg",
+      "creator_credit": "磨桂宾",
+      "original_activity": "施秉县杨柳塘镇中心小学的苗绣学习活动。",
+      "provenance_note": "主题与年龄相近；属于其他学校活动，不能视为本项目现场。",
+      "rights_status": "unconfirmed",
+      "rights_note": "素材包注明公开转载许可未确认；仅用于本地原型参考展示。"
+    },
+    {
+      "source_file": "05_参考图片/02_桌面描画图案_参考.jpg",
+      "filename": "drawing-reference.jpg",
+      "width": 800,
+      "height": 600,
+      "file_size_bytes": 417641,
+      "sha256": "8e10dcbf3f3f22b1d7ae008a3d62f80495e4e2b2afce193e400c0eebc6be6a4a",
+      "title": "过程参考图：孩子在活动中描画图案",
+      "caption": "过程参考图：孩子在活动中描画图案。",
+      "alt_text": "过程参考图：孩子在活动中描画图案。",
+      "usage_role": "reference",
+      "stage": 3,
+      "suggested_stage": 3,
+      "source_name": "南海博物馆",
+      "source_url": "https://www.nhmuseum.org/zhan-lan/3851.html",
+      "original_url": "https://www.nhmuseum.org/upfile/proPic/image/20240702/20240702170346_32954.jpg",
+      "creator_credit": null,
+      "original_activity": "蜡染展配套宣教活动，原网页第19张图。",
+      "provenance_note": "适合桌面操作和描图场景；属于其他活动。",
+      "rights_status": "unconfirmed",
+      "rights_note": "素材包注明公开转载许可未确认；仅用于本地原型参考展示。"
+    },
+    {
+      "source_file": "05_参考图片/03_同伴进行图案创作_参考.jpg",
+      "filename": "collaboration-reference.jpg",
+      "width": 4096,
+      "height": 2736,
+      "file_size_bytes": 1273025,
+      "sha256": "5541fa6257f2071f877958f2a0d178fa729a634aaccf7f74e447be3fd5e5f2b8",
+      "title": "过程参考图：孩子们一起进行蓝染图案创作",
+      "caption": "过程参考图：孩子们一起进行蓝染图案创作。",
+      "alt_text": "过程参考图：孩子们一起进行蓝染图案创作。",
+      "usage_role": "reference",
+      "stage": 4,
+      "suggested_stage": 4,
+      "source_name": "力可力可创想工作室",
+      "source_url": "https://work.likelike.li/indigo-dyeing/",
+      "original_url": "https://work.likelike.li/indigo-dyeing/UBX0g2OQvY5mvBhJXDFCpL4MR8.jpg",
+      "creator_credit": null,
+      "original_activity": "儿童古法蓝染手工活动。",
+      "provenance_note": "适合同伴操作和图案创作场景；不是特定苗绣项目，也不能证明发生过修改。",
+      "rights_status": "unconfirmed",
+      "rights_note": "素材包注明公开转载许可未确认；仅用于本地原型参考展示。"
+    },
+    {
+      "source_file": "05_参考图片/04_学生合作制作海报_其他主题参考.jpg",
+      "filename": "other-theme-reference.jpg",
+      "width": 768,
+      "height": 768,
+      "file_size_bytes": 90043,
+      "sha256": "7226ffcf68d60dd156c64d8d2bf6e1d9ec107d0dbe4fd8edadf1cf6820196f3e",
+      "title": "制作场景参考：学生合作绘制其他主题的海报",
+      "caption": "制作场景参考：学生合作绘制其他主题的海报。",
+      "alt_text": "制作场景参考：学生合作绘制其他主题的海报。",
+      "usage_role": "reference",
+      "stage": null,
+      "suggested_stage": 6,
+      "source_name": "国语日报社",
+      "source_url": "https://www.mdnkids.com/content.asp?sn=420",
+      "original_url": "https://www.mdnkids.com/upload/images/20210107-14-02.jpg",
+      "creator_credit": null,
+      "original_activity": "学生制作饮食主题的专题海报，画面主题与苗族文化不同。",
+      "provenance_note": "仅作制作动作、纸笔与合作构图参考，不是本项目的半成品照片；可选择不展示。",
+      "rights_status": "unconfirmed",
+      "rights_note": "素材包注明公开转载许可未确认；仅用于本地原型参考展示。"
+    }
+  ],
+  "source_notice": "图片来源与使用说明\n\n本包有1张用户提供的最终成果图，以及4张来自其他活动的过程参考照片。\n没有获得能够证实这些参考照片由学生本人拍摄的信息；请保留“过程参考图”标识。\n四张参考照片未确认开放转载许可，本包仅作素材整理，不代表获得公开发布授权。\n最终成果图原样复制；保留原图中的署名与日期，不据此填写未经确认的项目身份或时间。",
+  "archive_filename": "苗族文化项目_网站内容素材包.zip"
+}

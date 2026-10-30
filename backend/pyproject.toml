@@ -1,0 +1,27 @@
+[project]
+name = "dream-journey-database"
+version = "0.1.0"
+description = "Database layer for the Dream Journey project archive"
+requires-python = ">=3.11"
+dependencies = [
+    "SQLAlchemy>=2.0.54,<2.1",
+    "alembic>=1.16,<2",
+    "psycopg[binary]>=3.2,<4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.12,<1"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests/core"]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
