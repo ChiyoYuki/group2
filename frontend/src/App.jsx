@@ -1,64 +1,33 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { BrowserRouter, Routes, Route, Link, useNavigate, useParams } from 'react-router-dom'
 import * as echarts from 'echarts'
+import { projectDetails } from './projectDetails'
 
-// —— 示例项目数据（对接后端后替换成接口返回）
+// —— 项目数据（来自三个图文配音素材包）
 const projects = [
   {
-    slug: 'harbin-ice-architecture',
-    city: '哈尔滨', lng: 126.5349, lat: 45.8038, year: 2026,
-    title: '冰雪建筑的空间叙事',
-    theme: '建筑', cohort: '2026 暑期',
-    summary: '在零下二十度的中央大街，记录冰雪建筑如何塑造城市的冬日生活。',
-    image: 'https://picsum.photos/seed/harbin/320/320',
+    slug: 'dangaer-ancient-city',
+    city: '湟源', lng: 101.2711, lat: 36.6826, year: 2026,
+    title: '古城里的马，也要“吃饭”吗？',
+    theme: '历史文化', cohort: '去远方 项目',
+    summary: '从“马也进去吃饭吗”这个问题出发，寻找丹噶尔古城里做生意、歇脚和交流文化的线索。',
+    image: '/projects/dangaer/cover.png',
   },
   {
-    slug: 'beijing-hutong-memory',
-    city: '北京', lng: 116.4074, lat: 39.9042, year: 2025,
-    title: '胡同里的社区记忆',
-    theme: '文化', cohort: '2025 暑期',
-    summary: '走进南锣鼓巷的院落，用口述史拼出老北京的生活变迁。',
-    image: 'https://picsum.photos/seed/beijing/320/320',
+    slug: 'miao-embroidery-culture',
+    city: '贵州', lng: 106.6302, lat: 26.6646, year: 2026,
+    title: '用针线传承的民族文化',
+    theme: '民族文化', cohort: '去远方 项目',
+    summary: '从“苗族衣服上的花纹是怎么做出来的”这个问题出发，了解苗绣、银饰和蜡染，把发现画成一张手抄报。',
+    image: '/projects/miao/cover.png',
   },
   {
-    slug: 'xian-heritage-site',
-    city: '西安', lng: 108.9398, lat: 34.3416, year: 2025,
-    title: '城墙内外的遗产现场',
-    theme: '文化遗产', cohort: '2025 暑期',
-    summary: '跟随考古队员的步伐，理解古都如何在保护与生活之间取得平衡。',
-    image: 'https://picsum.photos/seed/xian/320/320',
-  },
-  {
-    slug: 'chengdu-irrigation',
-    city: '成都', lng: 104.0665, lat: 30.5723, year: 2026,
-    title: '川西林盘的生态智慧',
-    theme: '生态', cohort: '2026 暑期',
-    summary: '在都江堰的田野间，调查传统灌溉如何延续两千年。',
-    image: 'https://picsum.photos/seed/chengdu/320/320',
-  },
-  {
-    slug: 'kunming-wetland',
-    city: '昆明', lng: 102.8329, lat: 24.8801, year: 2026,
-    title: '滇池湿地的候鸟守望',
-    theme: '生态', cohort: '2026 暑期',
-    summary: '与巡护员一起监测候鸟，记录一片湿地修复的真实进度。',
-    image: 'https://picsum.photos/seed/kunming/320/320',
-  },
-  {
-    slug: 'hangzhou-tea',
-    city: '杭州', lng: 120.1551, lat: 30.2741, year: 2025,
-    title: '龙井茶山的农事节奏',
-    theme: '农业', cohort: '2025 暑期',
-    summary: '跟着茶农过一个采茶季，理解一片叶子背后的社区协作。',
-    image: 'https://picsum.photos/seed/hangzhou/320/320',
-  },
-  {
-    slug: 'guangzhou-arcade',
-    city: '广州', lng: 113.2644, lat: 23.1291, year: 2026,
-    title: '骑楼下的公共生活',
-    theme: '社区研究', cohort: '2026 暑期',
-    summary: '测量骑楼廊道的温度与人群，讨论老街区如何更新。',
-    image: 'https://picsum.photos/seed/guangzhou/320/320',
+    slug: 'nanjing-plane-trees',
+    city: '南京', lng: 118.7969, lat: 32.0603, year: 2026,
+    title: '梧桐把马路盖成“山洞”了吗？',
+    theme: '自然观察', cohort: '去远方 项目',
+    summary: '从一张林荫道路照片出发，看看树枝和叶子怎样把路变成绿色的“山洞”。',
+    image: '/projects/nanjing/cover.png',
   },
 ]
 
@@ -72,6 +41,9 @@ const CYCLE_MS = 1150
 
 // 主题说明（第 3 屏用）
 const THEME_DESC = {
+  历史文化: '古城、商路与历史的想象力',
+  民族文化: '苗绣、银饰与蜡染手艺',
+  自然观察: '行道树、树冠与城市里的自然',
   文化: '城市记忆、口述史与日常生活',
   文化遗产: '保护、修复与再使用',
   生态: '湿地、水系与生物多样性',
@@ -87,20 +59,20 @@ const VALUE_ITEMS = [
   {
     label: 'Educational',
     title: '教育价值',
-    lead: '把课堂搬到现场',
-    desc: '学生在真实场地中完成提问、取证与表达，从被动接收知识转向主动生产知识。',
+    lead: '把好奇变成问题',
+    desc: '学生从一个自己的问题出发，经历观察、查资料、动手做和表达，学会自己寻找答案。',
   },
   {
     label: 'Social',
     title: '社会影响',
-    lead: '让研究回到社区',
-    desc: '报告、口述档案与公共展陈回到当地，成为社区自我描述与协商的素材。',
+    lead: '让发现被更多人听见',
+    desc: '发现卡、手抄报和配音故事把学习成果分享出去，也留下可继续追问的线索。',
   },
   {
     label: 'Method',
     title: '方法价值',
-    lead: '可复用的田野方法',
-    desc: '访谈提纲、观察记录与影像归档被整理成模板，供下一届学生直接使用。',
+    lead: '可复用的探究流程',
+    desc: '先提问、再观察、查资料、分清事实与猜想——一套小学生也能用起来的学习方法。',
   },
 ]
 
@@ -363,7 +335,7 @@ function TimelineSection() {
           <div className="hero-eyebrow">Timeline</div>
           <h2 className="scene-title">活动时间轴</h2>
           <p className="scene-sub">
-            从 2025 到 2026，{projects.length} 次田野，一条持续生长的研究脉络。
+            从好奇出发，{projects.length} 个学习项目，一条不断生长的探究脉络。
           </p>
         </div>
 
@@ -471,7 +443,16 @@ function ValueSection() {
       { n: projects.length, l: '个项目' },
       { n: new Set(projects.map((p) => p.city)).size, l: '座城市' },
       { n: new Set(projects.map((p) => p.theme)).size, l: '个主题' },
-      { n: new Set(projects.map((p) => p.cohort)).size, l: '个届次' },
+      {
+        n: Object.values(projectDetails).reduce((sum, d) => {
+          return sum
+            + (d.origin?.audio ? 1 : 0)
+            + (d.journey?.length || 0)
+            + (d.outcome?.audio ? 1 : 0)
+            + (d.gains?.audio ? 1 : 0)
+        }, 0),
+        l: '段配音',
+      },
     ],
     []
   )
@@ -483,7 +464,7 @@ function ValueSection() {
           <div className="hero-eyebrow">Impact</div>
           <h2 className="scene-title">项目的价值与意义</h2>
           <p className="scene-sub">
-            教育、社会与方法三个层面，田野调研留下的不只是报告。
+            教育、社会与方法三个层面，孩子们的学习项目留下的不只是作品。
           </p>
         </div>
 
@@ -516,7 +497,7 @@ function ValueSection() {
         </div>
 
         <p className="value-note">
-          示例数据：真实的影响结论需附证据出处（反馈记录、报告章节等）。
+          项目过程依据照片与公开资料整理；开场插画与配音由 AI 生成，来源见各项目详情页。
         </p>
       </div>
     </section>
@@ -554,11 +535,11 @@ function HomePage() {
         <div className="hero-title">
           <div className="hero-eyebrow">Dream Journey</div>
           <h1 className="hero-h1">沿着光点，读一场场田野</h1>
-          <p className="hero-sub">往届学生实地调研项目 · 点击卡片进入详情</p>
+          <p className="hero-sub">学生探究项目 · 点击卡片进入详情</p>
         </div>
 
         <div className="hero-legend">
-          <i /> 去过的城市（示例数据）
+          <i /> 项目地点
         </div>
       </section>
 
@@ -570,43 +551,261 @@ function HomePage() {
   )
 }
 
-function ProjectDetail() {
-  const { slug } = useParams()
-  const project = projects.find((p) => p.slug === slug)
+// —— 配音播放按钮（同时只播一段）
+let currentAudio = null
+
+function AudioButton({ src }) {
+  const [playing, setPlaying] = useState(false)
+  const ref = useRef(null)
+
+  useEffect(() => () => ref.current?.pause(), [])
+
+  const toggle = () => {
+    const a = ref.current
+    if (!a) return
+    if (playing) {
+      a.pause()
+      setPlaying(false)
+      if (currentAudio === a) currentAudio = null
+      return
+    }
+    if (currentAudio && currentAudio !== a) currentAudio.pause()
+    currentAudio = a
+    a.play()
+    setPlaying(true)
+    a.onended = () => setPlaying(false)
+  }
 
   return (
-    <div className="detail-page">
-      <div className="detail-inner">
-        <Link className="back-link" to="/">← 返回地图</Link>
+    <span
+      className={`audio-btn ${playing ? 'is-playing' : ''}`}
+      role="button"
+      tabIndex={0}
+      onClick={toggle}
+      onKeyDown={(e) => { if (e.key === 'Enter') toggle() }}
+    >
+      <audio ref={ref} src={src} preload="none" />
+      <span className="audio-icon">{playing ? '❚❚' : '▶'}</span>
+      <span className="audio-label">{playing ? '暂停' : 'AI 配音'}</span>
+    </span>
+  )
+}
 
-        {project ? (
-          <>
-            <img
-              className="detail-cover"
-              src={project.image.replace('/320/320', '/1000/600')}
-              alt={project.title}
-              onError={(e) => {
-                if (e.currentTarget.dataset.fb) return
-                e.currentTarget.dataset.fb = '1'
-                e.currentTarget.src = fallbackImage(project.city)
-              }}
-            />
-            <div className="detail-meta">
-              {project.city} · {project.theme} · {project.cohort}
+function MediaFigure({ src, caption }) {
+  return (
+    <figure className="d-media">
+      <img src={src} alt={caption || ''} />
+      {caption && <figcaption>{caption}</figcaption>}
+    </figure>
+  )
+}
+
+function ProjectDetail() {
+  const { slug } = useParams()
+  const index = projects.findIndex((p) => p.slug === slug)
+  const project = projects[index]
+  const detail = projectDetails[slug]
+
+  if (!project || !detail) {
+    return (
+      <div className="detail">
+        <div className="detail-body">
+          <p>没有找到这个项目。</p>
+          <Link className="back-link" to="/">← 返回地图</Link>
+        </div>
+      </div>
+    )
+  }
+
+  const prev = projects[(index - 1 + projects.length) % projects.length]
+  const next = projects[(index + 1) % projects.length]
+  const title = detail.title || project.title
+
+  return (
+    <div className="detail">
+      <header
+        className="detail-hero"
+        style={{ backgroundImage: `url(${project.image})` }}
+      >
+        <Link className="detail-back" to="/">← 返回地图</Link>
+
+        <div className="detail-hero-inner">
+          <div className="detail-eyebrow">
+            {project.cohort} · {project.theme} · {project.city}
+          </div>
+          <h1 className="detail-title">{title}</h1>
+          <p className="detail-summary">{project.summary}</p>
+
+          <div className="detail-chips">
+            <span className="detail-chip">{detail.location}</span>
+            {detail.chips.map((c) => (
+              <span className="detail-chip" key={c}>{c}</span>
+            ))}
+            {detail.demoChip && (
+              <span className="detail-chip detail-chip--demo">{detail.demoChip}</span>
+            )}
+          </div>
+        </div>
+      </header>
+
+      <div className="detail-body">
+        {/* 项目起因 */}
+        {detail.origin && (
+          <section className="d-block">
+            <h2 className="d-h2">Why · 项目起因</h2>
+            <div className="d-origin">
+              <div className="d-origin-text">
+                <p className="d-question">{detail.origin.text}</p>
+                {detail.origin.audio && <AudioButton src={detail.origin.audio} />}
+              </div>
+              {detail.origin.image && (
+                <MediaFigure src={detail.origin.image} caption={detail.origin.imageCaption} />
+              )}
             </div>
-            <h1 className="detail-title">{project.title}</h1>
-            <p className="detail-summary">{project.summary}</p>
-            <p className="detail-note">
-              这是前端临时占位页。等后端详情接口就绪后，替换为真实的研究历程、成果与实践建议。
-            </p>
-          </>
-        ) : (
-          <p style={{ marginTop: 40 }}>没有找到这个项目。</p>
+          </section>
         )}
+
+        {/* 研究问题 */}
+        {detail.subQuestions && (
+          <section className="d-block">
+            <h2 className="d-h2">Questions · 我们想知道什么</h2>
+            <ol className="d-questions">
+              {detail.subQuestions.map((q) => (
+                <li key={q}>{q}</li>
+              ))}
+            </ol>
+          </section>
+        )}
+
+        {/* 研究方法 */}
+        {detail.methods && (
+          <section className="d-block">
+            <h2 className="d-h2">Methods · 研究方法</h2>
+            <div className="d-methods">
+              {detail.methods.map((m) => (
+                <span className="d-method" key={m}>{m}</span>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* 学习过程 */}
+        {detail.journey && (
+          <section className="d-block">
+            <h2 className="d-h2">Process · 我们的学习过程</h2>
+            <div className="d-journey">
+              {detail.journey.map((j) => (
+                <div className="d-step" key={j.time}>
+                  <div className="d-step-time">{j.time}</div>
+                  {j.title && <h3 className="d-step-title">{j.title}</h3>}
+                  <p className="d-step-desc">{j.desc}</p>
+                  {j.image && <MediaFigure src={j.image} caption={j.imageCaption} />}
+                  {j.table && (
+                    <div className="d-table-wrap">
+                      <table className="d-table">
+                        <thead>
+                          <tr>
+                            {j.table.columns.map((c) => (
+                              <th key={c}>{c}</th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {j.table.rows.map((row) => (
+                            <tr key={row[0]}>
+                              {row.map((cell) => (
+                                <td key={cell}>{cell}</td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                      {j.table.note && <p className="d-table-note">{j.table.note}</p>}
+                    </div>
+                  )}
+                  {(j.challenge || j.response) && (
+                    <dl className="d-triple d-triple--pair">
+                      <div>
+                        <dt>困难</dt>
+                        <dd>{j.challenge}</dd>
+                      </div>
+                      <div>
+                        <dt>应对</dt>
+                        <dd>{j.response}</dd>
+                      </div>
+                    </dl>
+                  )}
+                  {j.audio && <AudioButton src={j.audio} />}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* 成果 */}
+        {detail.outcome && (
+          <section className="d-block">
+            <h2 className="d-h2">Outcome · {detail.outcome.title}</h2>
+            {detail.outcome.text && (
+              <p className="d-step-desc">{detail.outcome.text}</p>
+            )}
+            {detail.outcome.points && (
+              <div className="d-outcome">
+                {detail.outcome.points.map((pt) => (
+                  <div className="d-outcome-point" key={pt.label}>
+                    <div className="d-outcome-label">{pt.label}</div>
+                    <p>{pt.text}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            {detail.outcome.image && (
+              <MediaFigure src={detail.outcome.image} caption={detail.outcome.imageCaption} />
+            )}
+            {detail.outcome.audio && <AudioButton src={detail.outcome.audio} />}
+          </section>
+        )}
+
+        {/* 学习收获 */}
+        {detail.gains && (
+          <section className="d-block">
+            <h2 className="d-h2">Reflections · 学习收获</h2>
+            <p className="d-step-desc">{detail.gains.text}</p>
+            {detail.gains.audio && <AudioButton src={detail.gains.audio} />}
+          </section>
+        )}
+
+        {/* 素材来源与说明 */}
+        <section className="d-block">
+          <h2 className="d-h2">Sources · 素材来源与说明</h2>
+          {detail.sources && (
+            <ul className="d-sources">
+              {detail.sources.map((s) => (
+                <li key={s.url}>
+                  <a href={s.url} target="_blank" rel="noreferrer">{s.name}</a>
+                  <span className="d-source-org">{s.org}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+          <ul className="d-notes">
+            {detail.notes.map((n) => (
+              <li key={n}>{n}</li>
+            ))}
+          </ul>
+        </section>
+
+        {/* 上下项目 */}
+        <nav className="d-nav">
+          <Link to={`/project/${prev.slug}`}>← {prev.city}</Link>
+          <Link to="/">回到地图</Link>
+          <Link to={`/project/${next.slug}`}>{next.city} →</Link>
+        </nav>
       </div>
     </div>
   )
 }
+
 
 function App() {
   return (
@@ -618,5 +817,4 @@ function App() {
     </BrowserRouter>
   )
 }
-
 export default App
